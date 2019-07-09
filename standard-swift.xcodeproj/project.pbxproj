@@ -15,6 +15,8 @@
 		8467E73322D53F4600ACE3CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467E73122D53F4600ACE3CC /* LaunchScreen.storyboard */; };
 		8467E73E22D53F4700ACE3CC /* standard_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E73D22D53F4700ACE3CC /* standard_swiftTests.swift */; };
 		8467E74922D53F4700ACE3CC /* standard_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E74822D53F4700ACE3CC /* standard_swiftUITests.swift */; };
+		8467E75722D53F6200ACE3CC /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75622D53F6200ACE3CC /* Index.swift */; };
+		8467E75922D53FB000ACE3CC /* Test_Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75822D53FB000ACE3CC /* Test_Index.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8467E74422D53F4700ACE3CC /* standard-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "standard-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8467E74822D53F4700ACE3CC /* standard_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = standard_swiftUITests.swift; sourceTree = "<group>"; };
 		8467E74A22D53F4700ACE3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467E75622D53F6200ACE3CC /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		8467E75822D53FB000ACE3CC /* Test_Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Index.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				8467E73122D53F4600ACE3CC /* LaunchScreen.storyboard */,
 				8467E73422D53F4600ACE3CC /* Info.plist */,
 				8467E72E22D53F4600ACE3CC /* Preview Content */,
+				8467E75622D53F6200ACE3CC /* Index.swift */,
 			);
 			path = "standard-swift";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				8467E73D22D53F4700ACE3CC /* standard_swiftTests.swift */,
 				8467E73F22D53F4700ACE3CC /* Info.plist */,
+				8467E75822D53FB000ACE3CC /* Test_Index.swift */,
 			);
 			path = "standard-swiftTests";
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			files = (
 				8467E72722D53F4500ACE3CC /* AppDelegate.swift in Sources */,
 				8467E72922D53F4500ACE3CC /* SceneDelegate.swift in Sources */,
+				8467E75722D53F6200ACE3CC /* Index.swift in Sources */,
 				8467E72B22D53F4500ACE3CC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8467E75922D53FB000ACE3CC /* Test_Index.swift in Sources */,
 				8467E73E22D53F4700ACE3CC /* standard_swiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
