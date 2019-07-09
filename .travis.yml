@@ -7,5 +7,10 @@ matrix:
         - bash <(curl -s https://codecov.io/bash) -t 481266e2-b6e4-4309-af21-13f0a9df1064
     - language: python
       python: 3.6
+      before_install:
+        - pip install requests
+        - pip install urllib
+        - pip install time
+        - pip install os
       script:
         - python request.py
