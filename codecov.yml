@@ -1,0 +1,5 @@
+ignore:
+  - "AppDelegate.swift"
+  - "ContentView.swift"
+  - "SceneDelegate.swift"
+  - "standard_swiftTests.swift"
