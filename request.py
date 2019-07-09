@@ -1,6 +1,5 @@
 #testing to see if I can hit the CC API and return coverage stats
 import requests
-import urllib
 import time
 import os
 
