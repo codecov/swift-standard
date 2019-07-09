@@ -27,7 +27,7 @@ class TestIndex: XCTestCase {
     }
     
     func test_fully_covered() {
-        XCTAssertFalse(indexObj.fully_covered())
+        XCTAssertTrue(indexObj.fully_covered())
     }
     
     
