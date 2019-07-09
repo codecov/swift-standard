@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode11
+script:
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=13.0' build test
+  - bash <(curl -s https://codecov.io/bash) -t 481266e2-b6e4-4309-af21-13f0a9df1064
