@@ -11,5 +11,5 @@ matrix:
       python: 3.6
       before_install:
         - pip install requests
-      script:
+      after_success:
         - python request.py
