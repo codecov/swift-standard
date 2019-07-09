@@ -9,7 +9,5 @@ matrix:
       python: 3.6
       before_install:
         - pip install requests
-        - pip install time
-        - pip install os
       script:
         - python request.py
