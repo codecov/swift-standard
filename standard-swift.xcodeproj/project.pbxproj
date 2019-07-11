@@ -17,6 +17,10 @@
 		8467E74922D53F4700ACE3CC /* standard_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E74822D53F4700ACE3CC /* standard_swiftUITests.swift */; };
 		8467E75722D53F6200ACE3CC /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75622D53F6200ACE3CC /* Index.swift */; };
 		8467E75922D53FB000ACE3CC /* Test_Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75822D53FB000ACE3CC /* Test_Index.swift */; };
+		8467E75B22D6CAB000ACE3CC /* ContentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75A22D6CAB000ACE3CC /* ContentRow.swift */; };
+		8467E75D22D6CBAF00ACE3CC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75C22D6CBAF00ACE3CC /* Data.swift */; };
+		8467E75F22D6D27900ACE3CC /* ContentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E75E22D6D27900ACE3CC /* ContentDetail.swift */; };
+		8467E76122D6DC3A00ACE3CC /* Test_Index_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E76022D6DC3A00ACE3CC /* Test_Index_UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		8467E74A22D53F4700ACE3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8467E75622D53F6200ACE3CC /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
 		8467E75822D53FB000ACE3CC /* Test_Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Index.swift; sourceTree = "<group>"; };
+		8467E75A22D6CAB000ACE3CC /* ContentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRow.swift; sourceTree = "<group>"; };
+		8467E75C22D6CBAF00ACE3CC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8467E75E22D6D27900ACE3CC /* ContentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetail.swift; sourceTree = "<group>"; };
+		8467E76022D6DC3A00ACE3CC /* Test_Index_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Index_UI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +114,14 @@
 				8467E72622D53F4500ACE3CC /* AppDelegate.swift */,
 				8467E72822D53F4500ACE3CC /* SceneDelegate.swift */,
 				8467E72A22D53F4500ACE3CC /* ContentView.swift */,
+				8467E75E22D6D27900ACE3CC /* ContentDetail.swift */,
+				8467E75A22D6CAB000ACE3CC /* ContentRow.swift */,
+				8467E75622D53F6200ACE3CC /* Index.swift */,
+				8467E75C22D6CBAF00ACE3CC /* Data.swift */,
 				8467E72C22D53F4600ACE3CC /* Assets.xcassets */,
 				8467E73122D53F4600ACE3CC /* LaunchScreen.storyboard */,
 				8467E73422D53F4600ACE3CC /* Info.plist */,
 				8467E72E22D53F4600ACE3CC /* Preview Content */,
-				8467E75622D53F6200ACE3CC /* Index.swift */,
 			);
 			path = "standard-swift";
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			children = (
 				8467E74822D53F4700ACE3CC /* standard_swiftUITests.swift */,
 				8467E74A22D53F4700ACE3CC /* Info.plist */,
+				8467E76022D6DC3A00ACE3CC /* Test_Index_UI.swift */,
 			);
 			path = "standard-swiftUITests";
 			sourceTree = "<group>";
@@ -274,8 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8467E72722D53F4500ACE3CC /* AppDelegate.swift in Sources */,
+				8467E75F22D6D27900ACE3CC /* ContentDetail.swift in Sources */,
+				8467E75D22D6CBAF00ACE3CC /* Data.swift in Sources */,
 				8467E72922D53F4500ACE3CC /* SceneDelegate.swift in Sources */,
 				8467E75722D53F6200ACE3CC /* Index.swift in Sources */,
+				8467E75B22D6CAB000ACE3CC /* ContentRow.swift in Sources */,
 				8467E72B22D53F4500ACE3CC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8467E76122D6DC3A00ACE3CC /* Test_Index_UI.swift in Sources */,
 				8467E74922D53F4700ACE3CC /* standard_swiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

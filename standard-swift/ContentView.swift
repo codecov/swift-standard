@@ -10,14 +10,15 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        Text("Hello World")
+        
+        NavigationView {
+            List(developers) { developer in
+                NavigationLink(destination: ContentDetail(name: developer.name,title: developer.title)) {
+                    ContentRow(name: developer.name,nickName: developer.nickName)
+                }
+            }
+            .navigationBarTitle(Text("Devs @ Codecov"))
+        }
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif
