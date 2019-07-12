@@ -1,6 +1,6 @@
 # Swift-Standard
 
-### TO-DO: ADD BUILD FLAG
+[![Build Status](https://travis-ci.org/codecov/Swift-Standard.svg?branch=master)](https://travis-ci.org/codecov/Swift-Standard)
 
 ### Last Updated: 07/12/19 21:02:34
 
