@@ -5,7 +5,7 @@ import os
 
 payload = {'token': os.environ['API_KEY']}
 
-link = 'https://codecov.io/api/gh/ibrahim0814/SwiftStandard-Draft'
+link = 'https://codecov.io/api/gh/codecov/Swift-Standard'
 
 print("Waiting 60 seconds for report to upload before pinging API...")
 
