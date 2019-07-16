@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/codecov/Swift-Standard.svg?branch=master)](https://travis-ci.org/codecov/Swift-Standard)
 
-### Last Updated: 07/15/19 16:29:39
+### Last Updated: 07/16/19 16:30:13
 
 ## Purpose
 
