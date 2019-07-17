@@ -10,7 +10,7 @@ This is a **Swift/Xcode** application, with basic unit tests, for which coverage
 
 ## Configuration
 
-This application is built in `Xcode 11` and uses `Swift 5`. The UI for this application is built atop SwiftUI. This project includes both unit and ui tests, written with the `XCTest` framework. These tests are simulated on an `iPhone Xʀ` running `iOS 13`. Coverage reports are generated via [Slather](https://github.com/SlatherOrg/slather).
+This application is built in `Xcode 11` and uses `Swift 5`. The UI for this application is built atop `SwiftUI`. This project includes both unit and ui tests, written with the `XCTest` framework. These tests are simulated on an `iPhone Xʀ` running `iOS 13`. Coverage reports are generated via [Slather](https://github.com/SlatherOrg/slather).
 
 Unit tests: `/standard-swiftTests/Test_Index.swift`
 
