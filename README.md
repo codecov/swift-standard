@@ -19,9 +19,17 @@ UI tests:
 
 Slather configuration: `/.slather.yml`
 
-## Slather & Coverage Inflation
+## Processing Coverage Reports
 
-All Xcode projects include separate folders for unit tests and ui tests. In some instances, the files in these folders may arbitrarily inflate the overall coverage percentage reported by Codecov because they are automatically lumped together as a part of the coverage report. If you don't want to include these files, we recommend you use Slather as a part of your workflow to generate coverage reports that will discard unit/ui test folders from your coverage report. Otherwise, you can choose to exclude these folders via your `.codecov.yml` through ignore paths.
+By default, coverage reports are not generated for Xcode builds. To make sure your Xcode scheme generates coverage reports click on your scheme --> "Edit Scheme" --> "Test" --> check "Gather coverage." Now, coverage reports will automatically be generated for each build
+
+## Errors Processing `.xccoverage` Files
+
+Xcode generates special `.xccoverage` files which hold coverage information for each build. These files are **not** human readable and Codecov may run into errors while parsing these files. To get the relevant information out of these files after your build, it is recommended you use a tool like [Slather](https://github.com/SlatherOrg/slather) or [Xcov](https://github.com/nakiostudio/xcov) to generate a `coverage.xml` file that can then be uploaded to Codecov.
+
+## Coverage Inflation
+
+All Xcode projects include separate folders for unit tests and ui tests. In some instances, the files in these folders may arbitrarily inflate the overall coverage percentage reported by Codecov because they are automatically lumped together as a part of the coverage report. If you don't want to include these files, we recommend you use Slather as a part of your workflow to generate coverage reports as it will discard unit/ui test folders from your coverage report. Otherwise, you can choose to exclude these folders via your `.codecov.yml` through [ignore paths](https://docs.codecov.io/docs/ignoring-paths).
 
 ## Reporting Issues
 
