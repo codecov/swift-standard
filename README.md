@@ -36,7 +36,7 @@ script:
 
 ## Processing Coverage Reports
 
-By default, coverage reports are not generated for Xcode builds. To make sure your Xcode scheme generates coverage reports click on your scheme --> "Edit Scheme" --> "Test" --> check "Gather coverage." Now, coverage reports will automatically be generated for each build
+By default, coverage reports are not generated for Xcode builds. To make sure your Xcode scheme generates coverage reports click on your scheme --> "Edit Scheme" --> "Test" --> check "Gather coverage." Now, coverage reports will automatically be generated for each build.
 
 ## Errors Processing `.xccoverage` Files
 
