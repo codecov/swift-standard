@@ -17,7 +17,22 @@ Unit tests: `/standard-swiftTests/Test_Index.swift`
 UI tests:
 `/standard-swiftUITests/Test_Index_UI.swift`
 
-Slather configuration: `/.slather.yml`
+Slather configuration:
+```
+coverage_service: cobertura_xml
+xcodeproj: ./standard-swift.xcodeproj
+scheme: standard-swift
+output_directory: ./
+```
+Travis configuration:
+```
+install:
+  - gem install slather
+script:
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=13.0' build test
+  - slather 
+  - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
+```
 
 ## Processing Coverage Reports
 
