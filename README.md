@@ -17,14 +17,14 @@ Unit tests: `/standard-swiftTests/Test_Index.swift`
 UI tests:
 `/standard-swiftUITests/Test_Index_UI.swift`
 
-Slather configuration:
+Slather configuration (.slather.yml):
 ```
 coverage_service: cobertura_xml
 xcodeproj: ./standard-swift.xcodeproj
 scheme: standard-swift
 output_directory: ./
 ```
-Travis configuration:
+Travis configuration (.travis.yml):
 ```
 install:
   - gem install slather
