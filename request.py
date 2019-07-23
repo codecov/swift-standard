@@ -1,4 +1,5 @@
-#testing to see if I can hit the CC API and return coverage stats
+#Function: this is a python script that checks to see if coverage reported from the Codecov API is accurate
+
 import requests
 import time
 import os
@@ -19,10 +20,10 @@ commit_data = all_data['commits'][0]
 coverage_percentage = commit_data['totals']['c']
 
 print("Ensuring coverage percentage is accurate...")
-#result should return 82.35294 as its coverage metric
-if(coverage_percentage == '82.35294'): 
-    print("Success! Codecov's API returned the correct coverage percentage")
+#result should return 82.35294  as its coverage metric
+if(coverage_percentage == os.environ['CORRECT_COVERAGE']): 
+    print("Success! Codecov's API returned the correct coverage percentage, "+ os.environ['CORRECT_COVERAGE'])
     exit(0)
 else:
-    print("Whoops, something is wrong D: Codecov did not return the correct coverage percentage. Coverage percentage should be 82.35294 but Codecov returned "+coverage_percentage)
+    print("Whoops, something is wrong D: Codecov did not return the correct coverage percentage. Coverage percentage should be "+os.environ['CORRECT_COVERAGE']+" but Codecov returned "+coverage_percentage)
     exit(1)
