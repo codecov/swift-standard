@@ -1,10 +1,8 @@
 language: swift
 osx_image: xcode11
 before_install:
-  - brew update
-  - brew upgrade python
+  - brew install python
   - pip install requests
-  - rvm use $RVM_RUBY_VERSION
 install:
   - gem install slather
 script:
@@ -12,6 +10,3 @@ script:
   - slather 
   - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
   - python request.py
-
-
- 
