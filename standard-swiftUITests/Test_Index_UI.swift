@@ -29,7 +29,7 @@ class Test_Index_UI: XCTestCase {
     func testCheckFirstButtonInfo() {
         let app = XCUIApplication()
         let tablesQuery = app.tables
-        tablesQuery.buttons["codecov1\nEli\nWise Falcon\nchevron.right"].tap()
+        tablesQuery.buttons["Eli\nWise Falcon"].tap()
         XCTAssertEqual(app.staticTexts.element(boundBy: 2).label, "CTO")
         
     }
