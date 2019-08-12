@@ -14,6 +14,7 @@ class Test_Index_UI: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         XCUIApplication().launch()
+        sleep(10)
     }
     
     //Check to see if the label for the first button is correct
