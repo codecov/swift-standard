@@ -22,7 +22,7 @@ class Test_Index_UI: XCTestCase {
         
         let app = XCUIApplication()
         let buttonsQuery = app.buttons
-        XCTAssertEqual(buttonsQuery.firstMatch.label,"codecov1\nEli\nWise Falcon\nchevron.right")
+        XCTAssertEqual(buttonsQuery.firstMatch.label,"Eli\nWise Falcon")
     }
     
     //Check to see if AFTER the first button is clicked, the correct information shows up
