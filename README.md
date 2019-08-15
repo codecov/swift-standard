@@ -18,14 +18,14 @@ UI tests:
 `/standard-swiftUITests/Test_Index_UI.swift`
 
 Slather configuration (.slather.yml):
-```
+```yaml
 coverage_service: cobertura_xml
 xcodeproj: ./standard-swift.xcodeproj
 scheme: standard-swift
 output_directory: ./
 ```
 Travis configuration (.travis.yml):
-```
+```yaml
 install:
   - gem install slather
 script:
