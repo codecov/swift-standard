@@ -1,6 +1,12 @@
 language: swift
 osx_image: xcode11
 before_install:
-
+  - brew install python
+  - pip install requests
+install:
+  - gem install slather
 script:
-  - bash <(curl -s https://codecov.io/bash) -f ./cobertura2.xml
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' build test
+  - slather 
+  - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
+  - python request.py
