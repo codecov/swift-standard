@@ -3,5 +3,4 @@ osx_image: xcode11
 before_install:
 
 script:
-  - export CODECOV_URL="https://12ea4795.ngrok.io/"
-  - bash <(curl -s https://12ea4795.ngrok.io/bash) -f ./swift_report.json
+  - bash <(curl -s https://codecov.io/bash) -f ./cobertura2.xml
