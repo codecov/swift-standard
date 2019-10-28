@@ -5,6 +5,6 @@ before_install:
   - brew install bluepill
   - pip install requests
 script:
-  - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
-  - bluepill --xctestrun-path ./standard-swift_iphonesimulator13.0-x86_64.xctestrun -o ./output/
+  - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
+  - bluepill --xctestrun-path ./standard-swift_iphonesimulator13.1-x86_64.xctestrun -o ./output/
   - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
