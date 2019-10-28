@@ -2,11 +2,9 @@ language: swift
 osx_image: xcode11
 before_install:
   - brew install python
+  - brew install bluepill
   - pip install requests
-install:
-  - gem install slather
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' build test
-  - slather 
+  - xcodebuild build-for-testing -scheme standard-swift -destination -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
+  - bluepill --xctestrun-path ./standard-swift_iphonesimulator13.0-x86_64.xctestrun -o ./output/
   - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
-  - python request.py
