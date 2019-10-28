@@ -8,5 +8,5 @@ script:
   - mkdir output_directory
   - xcodebuild build-for-testing -scheme standard-swift -sdk iphonesimulator build-for-testing 
   - ls
-  - bluepill --xctestrun-path ./standard-swift_iphonesimulator10.3-x86_64.xctestrun -o ./output/
+  - bluepill --xctestrun-path standard-swift_iphonesimulator10.3-x86_64.xctestrun -o output_directory
   - bash <(curl -s https://codecov.io/bash)
