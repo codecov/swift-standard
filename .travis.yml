@@ -8,5 +8,5 @@ script:
   - mkdir output_directory
   - xcodebuild build-for-testing -scheme standard-swift -sdk iphonesimulator build-for-testing -derivedDataPath .
   - ls
-  - bluepill -s MyScheme.xcscheme -o output_directory -o output_directory
+  - bluepill -s standard-swift.xcscheme -o output_directory 
   - bash <(curl -s https://codecov.io/bash) 
