@@ -2,7 +2,7 @@ language: swift
 osx_image: xcode11.1
 before_install:
   - brew install python
-  - brew install bluepill
+  - brew install bluepill --HEAD
   - pip install requests
 script:
   - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
