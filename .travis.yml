@@ -6,7 +6,7 @@ before_install:
   - pip install requests
 script:
   - mkdir output_directory
-  - xcodebuild build-for-testing -scheme standard-swift -sdk iphonesimulator build-for-testing -derivedDataPath .
+  - xcodebuild build-for-testing -scheme standard-swift -sdk iphonesimulator build-for-testing 
   - ls
-  - bluepill -s standard-swift.xcscheme -o output_directory 
-  - bash <(curl -s https://codecov.io/bash) 
+  - bluepill --xctestrun-path ./standard-swift_iphonesimulator10.3-x86_64.xctestrun -o ./output/
+  - bash <(curl -s https://codecov.io/bash)
