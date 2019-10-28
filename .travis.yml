@@ -6,6 +6,7 @@ before_install:
   - pip install requests
 script:
   - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' 
+  - cd
   - ls
-  - bluepill --xctestrun-path standard-swift_iphonesimulator13.1-x86_64.xctestrun -o ./output/
+  - bluepill --xctestrun-path /Users/travis/Library/Developer/Xcode/DerivedData/standard-swift-gacznwgrnrsktmdtnzfdsyzieqkl/Build/Products/Debug-iphonesimulator/standard-swift.app/PlugIns/standard-swiftTests.xctest -o ./output/
   - bash <(curl -s https://codecov.io/bash) 
