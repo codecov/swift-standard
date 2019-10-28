@@ -5,8 +5,8 @@ before_install:
   - brew install bluepill --HEAD
   - pip install requests
 script:
-  - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' 
-  - cd
-  - ls -R
-  - bluepill --xctestrun-path /Users/travis/Library/Developer/Xcode/DerivedData/standard-swift-gacznwgrnrsktmdtnzfdsyzieqkl/Build/Products/Debug-iphonesimulator/standard-swift.app/PlugIns/standard-swiftTests.xctest -o ./output/
+  - mkdir output_directory
+  - xcodebuild build-for-testing -scheme standard-swift -sdk iphonesimulator build-for-testing -derivedDataPath .
+  - ls
+  - bluepill -s MyScheme.xcscheme -o output_directory -o output_directory
   - bash <(curl -s https://codecov.io/bash) 
