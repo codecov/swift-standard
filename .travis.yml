@@ -1,13 +1,10 @@
 language: swift
 osx_image: xcode11.1
 before_install:
-  - brew install python
   - brew install bluepill --HEAD
-  - pip install requests
 script:
   - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES -derivedDataPath build
   - bluepill --xctestrun-path build/Build/Products/*.xctestrun -r "iOS 13.1" -d "iPhone 11" -o "./bluepill-output/report/"
-  - ls -R 
   - xcrun llvm-profdata merge -o ./bluepill-output/Coverage.profdata ./bluepill-output/**/**/*.profraw
   - xcrun llvm-cov show -instr-profile ./bluepill-output/Coverage.profdata ./build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > ./bluepill-output/standard-swift.app.coverage.txt
   - bash <(curl -s https://codecov.io/bash)
