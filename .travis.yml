@@ -7,12 +7,10 @@ before_install:
 script:
   - mkdir output_directory
   - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
-  - ls
   - cd 
   - cd /Users/travis/Library/Developer/Xcode/DerivedData/
-  - ls -R
   - cd  "$(\ls -1dt ./*/ | head -n 1)"
-  - pwd
-  - ls -R 
-  #- bluepill --xctestrun-path standard-swift_iphonesimulator10.3-x86_64.xctestrun -o output_directory
+  - cd Build/Products
+  - filePath=$(pwd)/standard-swift_iphonesimulator13.1-x86_64.xctestrun
+  - bluepill --xctestrun-path $filePath -o output_directory
   #- bash <(curl -s https://codecov.io/bash)
