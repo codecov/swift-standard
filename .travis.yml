@@ -10,8 +10,9 @@ script:
   - ls
   - cd 
   - cd /Users/travis/Library/Developer/Xcode/DerivedData/
-  - ls
+  - ls -R
   - cd  "$(\ls -1dt ./*/ | head -n 1)"
+  - pwd
   - ls -R 
   #- bluepill --xctestrun-path standard-swift_iphonesimulator10.3-x86_64.xctestrun -o output_directory
   #- bash <(curl -s https://codecov.io/bash)
