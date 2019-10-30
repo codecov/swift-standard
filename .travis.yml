@@ -6,5 +6,5 @@ script:
   - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES -derivedDataPath build
   - bluepill --xctestrun-path build/Build/Products/*.xctestrun -r "iOS 13.1" -d "iPhone 11" -o "./bluepill-output/report/"
   - xcrun llvm-profdata merge -o ./bluepill-output/Coverage.profdata ./bluepill-output/**/**/*.profraw
-  - xcrun llvm-cov show -instr-profile ./bluepill-output/Coverage.profdata ./build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > ./bluepill-output/standard-swift.app.coverage.txt
+  - xcrun llvm-cov export -format="lcov" -instr-profile ./bluepill-output/Coverage.profdata ./build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > ./bluepill-output/standard-swift-coverage.lcov
   - bash <(curl -s https://codecov.io/bash)
