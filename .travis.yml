@@ -5,12 +5,20 @@ before_install:
   - brew install bluepill --HEAD
   - pip install requests
 script:
-  - mkdir output_directory
-  - xcodebuild build-for-testing -scheme standard-swift -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
-  - cd 
-  - cd /Users/travis/Library/Developer/Xcode/DerivedData/
-  - cd  "$(\ls -1dt ./*/ | head -n 1)"
-  - cd Build/Products
-  - filePath=$(pwd)/standard-swift_iphonesimulator13.1-x86_64.xctestrun
-  - bluepill --xctestrun-path $filePath -o output_directory
-  #- bash <(curl -s https://codecov.io/bash)
+  - xcodebuild build-for-testing \
+    -scheme standard-swift \
+    -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' \
+    -enableCodeCoverage YES \
+    -derivedDataPath build
+  - bluepill --xctestrun-path build/Build/Products/*.xctestrun \
+    -r "iOS 13.1" \
+    -d "iPhone 11" \
+    -o "./bluepill-output/report/" 
+  - xcrun llvm-profdata merge \
+    -o ./bluepill-output/Coverage.profdata \
+    ./bluepill-output/**/**/*.profraw
+  - xcrun llvm-cov show \
+    -instr-profile ./bluepill-output/Coverage.profdata \
+    ./build/Build/Products/Testing-iphonesimulator/standard-swift.app/standard-swift \
+    > ./bluepill-output/standard-swift.app.coverage.txt
+  - bash <(curl -s https://codecov.io/bash)
