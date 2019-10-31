@@ -3,4 +3,6 @@ osx_image: xcode11.1
 script:
   - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
   - xcrun llvm-cov export -format="lcov" -instr-profile ./Build/Build/ProfileData/Coverage.profdata ./Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+  - cd Build/Build/
+  - ls -R
   - bash <(curl https://codecov.io/bash) -f info.lcov
