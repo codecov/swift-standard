@@ -1,11 +1,8 @@
 language: swift
 osx_image: xcode11
-before_install:
-  - brew install python
-  - pip install requests
-install:
-  - gem install slather
 script:
   - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
-  - xcrun llvm-cov export -format="lcov" -instr-profile  > info.lcov
+  - cd Build/Build/ProfileData/
+  - ls -R
+  #- xcrun llvm-cov export -format="lcov" -instr-profile  > info.lcov
 
