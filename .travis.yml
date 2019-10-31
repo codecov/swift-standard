@@ -6,7 +6,6 @@ before_install:
 install:
   - gem install slather
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' build test
-  - slather 
-  - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
-  - python request.py
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
+  - xcrun llvm-cov export -format="lcov" -instr-profile  > info.lcov
+
