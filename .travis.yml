@@ -8,8 +8,8 @@ script:
   - cd $(ls -d */|head -n 1)
   - directory=${PWD##*/} 
   - pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
-  - echo $path
+  - echo $pathCoverage
   - echo $directory
   - cd ../../../
-  - xcrun llvm-cov export -format="lcov" -instr-profile ./Build/Build/ProfileData/$(directory)/Coverage.profdata ./Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+  - xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage ./Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
   - bash <(curl https://codecov.io/bash)
