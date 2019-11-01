@@ -1,12 +1,12 @@
 language: swift
 osx_image: xcode11.1
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES -derivedDataPath build clean build test
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
   - pwd
-  - cd build/Build/ProfileData
+  - cd Build/Build/ProfileData
   - ls
   - cd $(ls -d */|head -n 1)
   - directory=${PWD##*/} 
   - cd ../../../
-  - xcrun llvm-cov export -format="lcov" -instr-profile ./build/Build/ProfileData/$(directory)/BuildCoverage.profdata ./build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+  - xcrun llvm-cov export -format="lcov" -instr-profile ./Build/Build/ProfileData/$(directory)/BuildCoverage.profdata ./Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
   - bash <(curl https://codecov.io/bash)
