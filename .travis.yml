@@ -13,4 +13,4 @@ script:
   - pwd
   - xcrun llvm-cov export -format="lcov" -instr-profile $coverageFile /Users/travis/build/codecov/swift-standard/Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
   - cd build/codecov/swift-standard
-  - bash <(curl https://codecov.io/bash) -f info.lcov
+  - bash <(curl https://codecov.io/bash)
