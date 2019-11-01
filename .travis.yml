@@ -11,5 +11,6 @@ script:
   - echo $pathCoverage
   - echo $directory
   - cd ../../../
-  - xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage ./Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+  - pwd
+  - xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
   - bash <(curl https://codecov.io/bash)
