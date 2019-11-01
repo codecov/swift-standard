@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode11.1
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage -derivedDataPath build YES clean build test
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES -derivedDataPath build clean build test
   - pwd
   - cd build/Build/ProfileData
   - ls
