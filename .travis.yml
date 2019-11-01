@@ -3,8 +3,9 @@ osx_image: xcode11.1
 script:
   - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
   - pwd
-  - cd Build/Build/ProfileData
-  - ls
+  - cd Build/Build
+  - ls -R
+  - cd ProfileData
   - cd $(ls -d */|head -n 1)
   - directory=${PWD##*/} 
   - pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
