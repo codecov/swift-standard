@@ -1,0 +1,28 @@
+--------------------------------------------------------------------------------
+Tests started: 2019-11-01 20:57:13 +0000
+--------------------------------------------------------------------------------
+2019-11-01 14:01:56.891960-0700 standard-swiftUITests-Runner[5311:394044] Launching with XCTest injected. Preparing to run tests.
+2019-11-01 14:01:57.061913-0700 standard-swiftUITests-Runner[5311:394044] Waiting to run tests until the app finishes launching.
+2019-11-01 14:01:57.209731-0700 standard-swiftUITests-Runner[5311:394044] Running tests...
+2019-11-01 14:02:00.779909-0700 standard-swiftUITests-Runner[5311:394044] Continuing to run tests in the background with task ID 2
+Test Suite 'Selected tests' started at 2019-11-01 14:02:02.512
+XCTestOutputBarrierTest Suite 'standard-swiftUITests.xctest' started at 2019-11-01 14:02:02.523
+XCTestOutputBarrierTest Suite 'standard_swiftUITests' started at 2019-11-01 14:02:02.527
+XCTestOutputBarrierTest Case '-[standard_swiftUITests.standard_swiftUITests testExample]' started.
+XCTestOutputBarrier    t =     0.00s Start Test at 2019-11-01 14:02:02.533
+2019-11-01 14:02:02.550470-0700 standard-swiftUITests-Runner[5311:394044] Can't end BackgroundTask: no background task exists with identifier 3 (0x3), or it may have already been ended. Break in UIApplicationEndBackgroundTaskError() to debug.
+    t =     0.21s Set Up
+    t =     0.23s     Open codecov.standard-swift
+    t =     0.39s         Launch codecov.standard-swift
+    t =     2.71s             Setting up automation session
+    t =     3.58s             Wait for codecov.standard-swift to idle
+    t =     5.34s Tear Down
+Test Case '-[standard_swiftUITests.standard_swiftUITests testExample]' passed (5.578 seconds).
+XCTestOutputBarrierTest Suite 'standard_swiftUITests' passed at 2019-11-01 14:02:08.109.
+	 Executed 1 test, with 0 failures (0 unexpected) in 5.578 (5.581) seconds
+XCTestOutputBarrierTest Suite 'standard-swiftUITests.xctest' passed at 2019-11-01 14:02:08.110.
+	 Executed 1 test, with 0 failures (0 unexpected) in 5.578 (5.586) seconds
+XCTestOutputBarrierTest Suite 'Selected tests' passed at 2019-11-01 14:02:08.112.
+	 Executed 1 test, with 0 failures (0 unexpected) in 5.578 (5.599) seconds
+XCTestOutputBarrierXCTestOutputBarrier
+BP_APP_PROC_ENDED

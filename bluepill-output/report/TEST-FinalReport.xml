@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="All tests" tests="7" failures="0" errors="0" time="70.517000">
+    <testsuite tests="4" failures="0" errors="0" time="0.493000" timestamp="2019-11-01T13:56:54GMT-07:00" name="standard-swiftTests.xctest">
+        <testsuite tests="2" failures="0" errors="0" time="0.005000" timestamp="2019-11-01T13:56:54GMT-07:00" name="TestIndex">
+            <testcase classname="TestIndex" name="test_fully_covered" time="0.003000"></testcase>
+            <testcase classname="TestIndex" name="test_uncovered_if" time="0.002000"></testcase>
+        </testsuite>
+        <testsuite tests="2" failures="0" errors="0" time="0.488000" timestamp="2019-11-01T13:56:54GMT-07:00" name="standard_swiftTests">
+            <testcase classname="standard_swiftTests" name="testExample" time="0.004000"></testcase>
+            <testcase classname="standard_swiftTests" name="testPerformanceExample" time="0.484000">
+                <system-out>
+XCTestOutputBarrier/Users/Ibrahim/Desktop/codecov/swift-standard/standard-swiftTests/standard_swiftTests.swift:29: Test Case '-[standard_swiftTests.standard_swiftTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 68.669%, values: [0.000043, 0.000016, 0.000011, 0.000024, 0.000011, 0.000010, 0.000009, 0.000009, 0.000009, 0.000009], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+        </system-out>
+            </testcase>
+        </testsuite>
+    </testsuite>
+    <testsuite tests="3" failures="0" errors="0" time="70.024000" timestamp="2019-11-01T13:59:49GMT-07:00" name="standard-swiftUITests.xctest">
+        <testsuite tests="2" failures="0" errors="0" time="64.446000" timestamp="2019-11-01T13:59:50GMT-07:00" name="Test_Index_UI">
+            <testcase classname="Test_Index_UI" name="testCheckFirstButtonInfo" time="37.081000">
+                <system-out>
+XCTestOutputBarrier    t =     0.01s Start Test at 2019-11-01 13:59:50.197
+2019-11-01 13:59:50.280266-0700 standard-swiftUITests-Runner[5193:361306] Can't end BackgroundTask: no background task exists with identifier 3 (0x3), or it may have already been ended. Break in UIApplicationEndBackgroundTaskError() to debug.
+    t =     0.79s Set Up
+    t =     0.81s     Open codecov.standard-swift
+    t =     1.18s         Launch codecov.standard-swift
+    t =    19.70s             Setting up automation session
+    t =    22.05s             Wait for codecov.standard-swift to idle
+    t =    34.27s Tap "Eli
+Wise Falcon" Button
+    t =    34.27s     Wait for codecov.standard-swift to idle
+    t =    34.34s     Find the "Eli
+Wise Falcon" Button
+    t =    34.93s     Check for interrupting elements affecting "Eli
+Wise Falcon" Button
+    t =    35.18s     Synthesize event
+    t =    36.14s     Wait for codecov.standard-swift to idle
+    t =    36.69s Find the StaticText
+    t =    36.76s Tear Down
+        </system-out>
+            </testcase>
+            <testcase classname="Test_Index_UI" name="testFirstButtonLabel" time="27.365000">
+                <system-out>
+XCTestOutputBarrier    t =     0.09s Start Test at 2019-11-01 14:01:16.224
+2019-11-01 14:01:16.260530-0700 standard-swiftUITests-Runner[5284:386335] Can't end BackgroundTask: no background task exists with identifier 3 (0x3), or it may have already been ended. Break in UIApplicationEndBackgroundTaskError() to debug.
+    t =     0.39s Set Up
+    t =     0.41s     Open codecov.standard-swift
+    t =     0.66s         Launch codecov.standard-swift
+    t =     6.60s             Setting up automation session
+    t =    13.51s             Wait for codecov.standard-swift to idle
+    t =    25.73s Find the Button
+    t =    27.06s Tear Down
+        </system-out>
+            </testcase>
+        </testsuite>
+        <testsuite tests="1" failures="0" errors="0" time="5.578000" timestamp="2019-11-01T14:02:02GMT-07:00" name="standard_swiftUITests">
+            <testcase classname="standard_swiftUITests" name="testExample" time="5.578000">
+                <system-out>
+XCTestOutputBarrier    t =     0.00s Start Test at 2019-11-01 14:02:02.533
+2019-11-01 14:02:02.550470-0700 standard-swiftUITests-Runner[5311:394044] Can't end BackgroundTask: no background task exists with identifier 3 (0x3), or it may have already been ended. Break in UIApplicationEndBackgroundTaskError() to debug.
+    t =     0.21s Set Up
+    t =     0.23s     Open codecov.standard-swift
+    t =     0.39s         Launch codecov.standard-swift
+    t =     2.71s             Setting up automation session
+    t =     3.58s             Wait for codecov.standard-swift to idle
+    t =     5.34s Tear Down
+        </system-out>
+            </testcase>
+        </testsuite>
+    </testsuite>
+</testsuites>

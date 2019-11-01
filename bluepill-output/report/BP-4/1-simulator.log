@@ -1,0 +1,19 @@
+--------------------------------------------------------------------------------
+Tests started: 2019-11-01 20:50:39 +0000
+--------------------------------------------------------------------------------
+2019-11-01 13:56:59.633986-0700 standard-swift[4852:308252] Launching with XCTest injected. Preparing to run tests.
+2019-11-01 13:56:59.696442-0700 standard-swift[4852:308252] Waiting to run tests until the app finishes launching.
+Test Suite 'Selected tests' started at 2019-11-01 13:57:02.723
+XCTestOutputBarrierTest Suite 'standard-swiftTests.xctest' started at 2019-11-01 13:57:02.727
+XCTestOutputBarrierTest Suite 'standard_swiftTests' started at 2019-11-01 13:57:02.728
+XCTestOutputBarrierTest Case '-[standard_swiftTests.standard_swiftTests testPerformanceExample]' started.
+XCTestOutputBarrier/Users/Ibrahim/Desktop/codecov/swift-standard/standard-swiftTests/standard_swiftTests.swift:29: Test Case '-[standard_swiftTests.standard_swiftTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 68.669%, values: [0.000043, 0.000016, 0.000011, 0.000024, 0.000011, 0.000010, 0.000009, 0.000009, 0.000009, 0.000009], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+XCTestOutputBarrierTest Case '-[standard_swiftTests.standard_swiftTests testPerformanceExample]' passed (0.484 seconds).
+XCTestOutputBarrierTest Suite 'standard_swiftTests' passed at 2019-11-01 13:57:03.215.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.484 (0.487) seconds
+XCTestOutputBarrierTest Suite 'standard-swiftTests.xctest' passed at 2019-11-01 13:57:03.216.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.484 (0.489) seconds
+XCTestOutputBarrierTest Suite 'Selected tests' passed at 2019-11-01 13:57:03.216.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.484 (0.493) seconds
+XCTestOutputBarrierXCTestOutputBarrier
+BP_APP_PROC_ENDED

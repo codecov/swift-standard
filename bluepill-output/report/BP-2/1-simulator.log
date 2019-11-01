@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------
+Tests started: 2019-11-01 20:50:23 +0000
+--------------------------------------------------------------------------------
+2019-11-01 13:57:09.400354-0700 standard-swift[4901:312254] Launching with XCTest injected. Preparing to run tests.
+2019-11-01 13:57:09.448577-0700 standard-swift[4901:312254] Waiting to run tests until the app finishes launching.
+Test Suite 'Selected tests' started at 2019-11-01 13:57:13.035
+XCTestOutputBarrierTest Suite 'standard-swiftTests.xctest' started at 2019-11-01 13:57:13.039
+XCTestOutputBarrierTest Suite 'TestIndex' started at 2019-11-01 13:57:13.040
+XCTestOutputBarrierTest Case '-[standard_swiftTests.TestIndex test_uncovered_if]' started.
+XCTestOutputBarrierTest Case '-[standard_swiftTests.TestIndex test_uncovered_if]' passed (0.002 seconds).
+XCTestOutputBarrierTest Suite 'TestIndex' passed at 2019-11-01 13:57:13.044.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.005) seconds
+XCTestOutputBarrierTest Suite 'standard-swiftTests.xctest' passed at 2019-11-01 13:57:13.045.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.007) seconds
+XCTestOutputBarrierTest Suite 'Selected tests' passed at 2019-11-01 13:57:13.046.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.012) seconds
+XCTestOutputBarrierXCTestOutputBarrier
+BP_APP_PROC_ENDED
