@@ -1,12 +1,15 @@
 language: swift
-osx_image: xcode11
+osx_image: xcode11.1
 before_install:
   - brew install python
   - pip install requests
-install:
-  - gem install slather
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' build test
-  - slather 
-  - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
+  - xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
+  - cd Build/Build/ProfileData
+  - cd $(ls -d */|head -n 1)
+  - directory=${PWD##*/} 
+  - pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
+  - cd ../../../../
+  - xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+  - bash <(curl https://codecov.io/bash)
   - python request.py
