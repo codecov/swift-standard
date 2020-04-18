@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/codecov/Swift-Standard.svg?branch=master)](https://travis-ci.org/codecov/Swift-Standard) [![codecov](https://codecov.io/gh/codecov/Swift-Standard/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/Swift-Standard)
 
-### Last Updated: 04/17/20 18:42:27
+### Last Updated: 04/18/20 18:43:14
 
 ## What is this?
 
