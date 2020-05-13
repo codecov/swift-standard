@@ -40,7 +40,7 @@ By default, coverage reports are not generated for Xcode builds. To make sure yo
 
 ## Errors Processing `.xccoverage` Files
 
-Xcode generates special `.xccoverage` files which hold coverage information for each build. These files are **not** human readable and Codecov may run into errors while parsing these files. To get the relevant information out of these files after your build, it is recommended you use a tool like [Slather](https://github.com/SlatherOrg/slather) or [Xcov](https://github.com/nakiostudio/xcov) to generate a `coverage.xml` file that can then be uploaded to Codecov.
+Xcode generates special `.xccoverage` files which hold coverage information for each build. These files are **not** human readable and Codecov may run into errors while parsing these files. To get the relevant information out of these files after your build, it is recommended you use a tool like [Slather](https://github.com/SlatherOrg/slather) to generate a `coverage.xml` file that can then be uploaded to Codecov.
 
 ## Coverage Inflation
 
