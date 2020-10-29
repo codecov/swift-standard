@@ -13,4 +13,4 @@ script:
   - xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
   - bash <(curl https://codecov.io/bash)
   - python request.py
-  - ../upstream.sh
+  - ./upstream.sh
