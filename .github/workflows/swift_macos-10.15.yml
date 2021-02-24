@@ -22,7 +22,7 @@ jobs:
     - name: Xcode Version
       run: xcodebuild -version
     - name: Build and Test
-    - run: |
+      run: |
         xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1' -enableCodeCoverage YES clean build test
         cd Build/Build/ProfileData
         cd $(ls -d */|head -n 1)
