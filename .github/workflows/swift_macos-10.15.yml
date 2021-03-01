@@ -16,7 +16,7 @@ jobs:
       with:
         fetch-depth: 2
        
-    - uses: actions/setup-python@2
+    - uses: actions/setup-python@v2
     - run: pip install requests
     - name: Install xcode-install
       run: gem install xcode-install
