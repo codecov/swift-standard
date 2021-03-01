@@ -16,7 +16,7 @@ jobs:
       with:
         fetch-depth: 2
        
-    - run: brew install python
+    - uses: actions/setup-python
     - run: pip install requests
     - name: Install xcode-install
       run: gem install xcode-install
