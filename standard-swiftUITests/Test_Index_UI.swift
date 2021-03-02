@@ -22,14 +22,14 @@ class Test_Index_UI: XCTestCase {
         
         let app = XCUIApplication()
         let buttonsQuery = app.buttons
-        XCTAssertEqual(buttonsQuery.firstMatch.label,"Eli\nWise Falcon")
+        XCTAssertEqual(buttonsQuery.firstMatch.label,"Eli, Wise Falcon")
     }
     
     //Check to see if AFTER the first button is clicked, the correct information shows up
     func testCheckFirstButtonInfo() {
         let app = XCUIApplication()
         let tablesQuery = app.tables
-        tablesQuery.buttons["Eli\nWise Falcon"].tap()
+        tablesQuery.buttons["Eli, Wise Falcon"].tap()
         XCTAssertEqual(app.staticTexts.element(boundBy: 2).label, "CTO")
         
     }

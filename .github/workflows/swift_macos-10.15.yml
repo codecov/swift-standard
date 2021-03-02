@@ -1,0 +1,44 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-10.15
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+       
+    - uses: actions/setup-python@v2
+    - run: pip install requests
+    - name: Install xcode-install
+      run: gem install xcode-install
+#    - name: List possible Xcode version
+#      run: xcversion list
+    - name: Install xcode 11.7
+      run: xcversion install 11.7
+    - name: Xcode Version
+      run: xcodebuild -version
+    - name: Build and Test
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+        CORRECT_COVERAGE: ${{ secrets.CORRECT_COVERAGE }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4' -enableCodeCoverage YES clean build test
+        cd Build/Build/ProfileData
+        cd $(ls -d */|head -n 1)
+        directory=${PWD##*/} 
+        pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
+        cd ../../../../
+        xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+        bash <(curl https://codecov.io/bash)
+        python request.py
+        ./upstream.sh
