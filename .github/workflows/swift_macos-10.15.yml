@@ -24,6 +24,8 @@ jobs:
 #      run: xcversion list
     - name: Install xcode 11.7
       run: xcversion install 11.7
+    - name: Select xcode 11.7
+      run: xcversion select 11.7
     - name: Xcode Version
       run: xcodebuild -version
     - name: Build and Test
