@@ -15,8 +15,15 @@ echo "Cloning the standards repo in the parent directory"
 cd ..
 git clone https://codecov:${GH_TOKEN}@github.com/codecov/standards.git
 cd standards
-echo "Creating the coverage_data directory if it does not exist"
+echo "Deleting content in coverage_data if it exists"
 COVERAGE_DEST_DIR="coverage_data/$PROJECT_NAME"
+rm -rf $COVERAGE_DEST_DIR
+echo "Commiting deletion of coverage data"
+git config --global user.email "devops@codecov.local"
+git config --global user.name "Codecov Devops"
+git add .
+git commit -m "Deleting existing coverage data for $PROJECT_NAME with SHA $COVERAGE_SHA"
+echo "Recreating coverage directory"
 mkdir -p $COVERAGE_DEST_DIR
 echo "Copying the coverage file and SHA.txt to the coverage directory"
 cp ../$PROJECT_NAME/$COVERAGE_SOURCE_FILE $COVERAGE_DEST_DIR/
