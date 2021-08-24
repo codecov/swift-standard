@@ -1,11 +1,11 @@
 name: Github Actions Swift Standard
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push]
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
+  #   branches:
+  #     - master
 jobs:
   test-and-standard-upload:
     runs-on: macos-10.15
@@ -33,15 +33,17 @@ jobs:
         pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
         cd ../../../../
         xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
-        bash <(curl https://codecov.io/bash)
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov -t ${CODECOV_TOKEN}
         python request.py
-    - name: Upstream to Standards
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        COVERAGE_SOURCE_FILE: ${{ secrets.COVERAGE_SOURCE_FILE }}
-      if: ${{ github.event_name == 'push'}}
-      run: |
-        wget --header "Authorization: token ${GH_TOKEN}" \
-        --header "Accept: application/vnd.github.v3.raw" \
-        https://api.github.com/repos/codecov/standards/contents/upstream.sh
-        bash upstream.sh
+    # - name: Upstream to Standards
+    #   env:
+    #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    #     COVERAGE_SOURCE_FILE: ${{ secrets.COVERAGE_SOURCE_FILE }}
+    #   if: ${{ github.event_name == 'push'}}
+    #   run: |
+    #     wget --header "Authorization: token ${GH_TOKEN}" \
+    #     --header "Accept: application/vnd.github.v3.raw" \
+    #     https://api.github.com/repos/codecov/standards/contents/upstream.sh
+    #     bash upstream.sh
