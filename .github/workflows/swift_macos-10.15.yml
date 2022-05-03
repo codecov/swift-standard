@@ -17,8 +17,8 @@ jobs:
     - run: pip install requests
     - name: Install xcode-install
       run: gem install xcode-install
-    - name: Install xcode 11.7
-      run: xcversion install 11.7
+    - name: Install xcode 13.3.1
+      run: xcversion install 13.3.1
     - name: Xcode Version
       run: xcodebuild -version
     - name: Build and Test
