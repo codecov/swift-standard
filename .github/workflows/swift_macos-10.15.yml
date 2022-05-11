@@ -33,6 +33,8 @@ jobs:
         pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
         cd ../../../../
         xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
+        genhtml info.lcov --output-directory out
+        ls out/
         curl -Os https://uploader.codecov.io/latest/macos/codecov
         chmod +x codecov
         ./codecov -t ${CODECOV_TOKEN}
