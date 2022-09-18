@@ -2,7 +2,7 @@
 
 [![Workflow for C++ Standard Action](https://github.com/codecov/swift-standard/actions/workflows/swift_macos-10.15.yml/badge.svg)](https://github.com/codecov/swift-standard/actions/workflows/swift_macos-10.15.yml) [![codecov](https://codecov.io/gh/codecov/Swift-Standard/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/Swift-Standard)
 
-### Last Updated: 09/17/22 00:17:22
+### Last Updated: 09/18/22 00:18:16
 
 ## What is this?
 
