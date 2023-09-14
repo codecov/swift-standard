@@ -2,29 +2,24 @@ name: Github Actions Swift Standard
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 jobs:
   test-and-standard-upload:
-    runs-on: macos-10.15
+    runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 2
+    - uses: actions/checkout@v4
     - uses: actions/setup-python@v2
     - run: pip install requests
-    - name: Install xcode-install
-      run: gem install xcode-install
-    - name: Install xcode 11.7
-      run: xcversion install 11.7
+    - name: Install xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
     - name: Xcode Version
       run: xcodebuild -version
     - name: Build and Test
-      env:
-        API_KEY: ${{ secrets.API_KEY }}
-        CORRECT_COVERAGE: ${{ secrets.CORRECT_COVERAGE }}
       run: |
         xcodebuild -scheme standard-swift -sdk iphonesimulator -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4' -enableCodeCoverage YES clean build test
         cd Build/Build/ProfileData
@@ -33,10 +28,15 @@ jobs:
         pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
         cd ../../../../
         xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
-        curl -Os https://uploader.codecov.io/latest/macos/codecov
-        chmod +x codecov
-        ./codecov -t ${CODECOV_TOKEN}
-        python request.py
+    - name: Upload to Codecov
+      uses: codecov/codecov-action@v4
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
+    - name: Test coverage vaulue
+      run: python request.py
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+        CORRECT_COVERAGE: ${{ secrets.CORRECT_COVERAGE }}
     - name: Upstream to Standards
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
