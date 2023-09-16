@@ -29,7 +29,7 @@ jobs:
         cd ../../../../
         xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/standard-swift.app/standard-swift > info.lcov
     - name: Upload to Codecov
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v4-beta
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
     - name: Test coverage vaulue
